@@ -1,0 +1,9 @@
+---
+- hosts: all
+  become: yes
+  become_method: sudo
+  become_user: gridgain
+  vars_files: 
+    - "/etc/ansible/shielding-ansible-playbook/vars/{{ env }}.yml"
+  roles:
+    - { role: '/etc/ansible/shielding-ansible-playbook/roles/shielding-deployment' }

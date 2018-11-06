@@ -1,0 +1,8 @@
+---
+#- name: Validate variables
+#  include_task: validation.yml
+ 
+- name: copy packages & configs
+  shell: /opt/gridgain/toolbox/deployShielding_v1.0.sh {{ artifact_path }} {{ cluster }} {{ module }}
+
+  
